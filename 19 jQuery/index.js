@@ -11,3 +11,9 @@ $("h1").text("Bye");    //changes text
 $("button").text("Don't click me");     //changes text for all the buttons
 
 $("button").html("<em>Hey</em>");    //changes innerHTML
+
+//Manipulating attributes
+
+console.log($("img").attr("src"));
+
+$("a").attr("href","https://yahoo.com");
