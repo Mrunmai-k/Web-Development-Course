@@ -40,3 +40,41 @@ $("h1").on("mouseenter",function(){
     $("h1").css("background-color", "lightgray");
 })
 
+// Adding elements
+
+$("h1").before("<button>Before</button>");
+$("h1").after("<button>After</button>");
+$("h1").prepend("<button>Prepend</button>");
+$("h1").append("<button>Append</button>");
+
+// Removing elements
+
+$("a").remove();
+
+// Animations
+$("button").on("click",function(){
+    $("h1").hide();
+});
+
+$("h1").show();
+
+$("input").on("mouseover",function(){
+    $("h1").toggle();
+});
+
+$("button").on("click",function(){
+    $("img").fadeOut();
+});
+
+$("img").fadeIn();
+
+$("input").on("mouseover",function(){
+    $("img").fadeToggle();
+});
+
+// slideUp-slideDown is same as hide-show fadeOut-fadeIn
+
+$("button").on("click",function(){
+    $("h1").animate({opacity: 0.5});  //works only when the value is numeric and not text. e.g color
+});
+
