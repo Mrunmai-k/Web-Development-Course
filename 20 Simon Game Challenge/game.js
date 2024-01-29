@@ -6,6 +6,7 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+// Use any key to start the game
 $(document).keypress(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
@@ -14,6 +15,7 @@ $(document).keypress(function () {
     }
 });
 
+// Store the value of button clicked by user to check the answers.
 $(".btn").on("click", function (event) {
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
@@ -24,6 +26,7 @@ $(".btn").on("click", function (event) {
     checkAnswer(userClickedPattern.length - 1);
 });
 
+// Verify the answers with game pattern and state the result
 function checkAnswer(currentLevel) {
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
         console.log("success");
@@ -41,14 +44,17 @@ function checkAnswer(currentLevel) {
 
         $("body").addClass("game-over");
 
-        setTimeout(function(){
+        setTimeout(function () {
             $("body").removeClass("game-over");
-        },200);
+        }, 200);
 
         $("#level-title").text("Game Over, Press Any Key to Restart");
+
+        startOver();
     }
 }
 
+// Start and decide the colours for next level
 function nextSequence() {
     userClickedPattern = [];
     level++;
@@ -64,17 +70,26 @@ function nextSequence() {
     playSound(randomChosenColour);
 }
 
+// To play sound 
 function playSound(name) {
     var audio = new Audio("sounds/" + name + ".mp3");
     audio.play();
 }
 
+// To animate the button after it is clicked
 function animatePress(currentColor) {
     $("#" + currentColor).addClass("pressed");
 
     setTimeout(function () {
         $("#" + currentColor).removeClass("pressed");
     }, 100);
+}
+
+// To start over the game
+function startOver() {
+    level = 0;
+    gamePattern = [];
+    started = false;
 }
 
 
