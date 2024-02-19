@@ -14,6 +14,22 @@ app.get("/about",(req,res) => {
     res.send("This is a practice Express server to understand HTTP requests");
 })
 
+app.post("/register",(req,res) => {
+    res.sendStatus(201);
+})
+
+app.put("/user/mrunmai",(req,res) => {
+    res.sendStatus(200);
+})
+
+app.patch("/user/mrunmai",(req,res) => {
+    res.sendStatus(200);
+})
+
+app.delete("/user/mrunmai",(req,res) => {
+    res.sendStatus(200);
+})
+
 app.listen(port, () => {
     console.log(`The server is running on port ${port}.`);
 })
