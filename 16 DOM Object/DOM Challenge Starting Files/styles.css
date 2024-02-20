@@ -5,8 +5,3 @@ h1 {
 button:active{
   color: red;
 }
-
-.huge {
-  font-size: 10rem;
-  font-weight: bold;
-}
