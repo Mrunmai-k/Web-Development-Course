@@ -22,10 +22,11 @@ var password = "";
 var isUserAuth = false;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true })); now body-parser is included in express.
 
-function checkPassword(req,res,next){
+function checkPassword(req, res, next) {
     password = req.body['password'];
-    if(password === "ILoveProgramming"){
+    if (password === "ILoveProgramming") {
         isUserAuth = true;
     }
     next();
@@ -36,6 +37,15 @@ app.use(checkPassword);
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
+
+app.post("/check", (req, res) => {
+    if (isUserAuth)
+        res.sendFile(__dirname + "/public/secret.html");
+    else{
+        res.sendFile(__dirname + "/public/index.html");
+        // res.redirect("/");
+    }
+})
 
 app.listen(port, () => {
     console.log(`App is listening on port ${port}`);
