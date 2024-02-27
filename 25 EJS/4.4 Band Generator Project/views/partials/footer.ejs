@@ -1,8 +1,13 @@
 </main>
 
+<% 
+let currentDate = new Date();
+let currentYear = currentDate.getFullYear(); 
+%>
+
 <footer>
   <!-- Step 4 - Add a dynamic year to the footer using JS. -->
-  <p>Copyright © 200X</p>
+  <p>Copyright © <%= currentYear %></p>
 </footer>
 </body>
 
