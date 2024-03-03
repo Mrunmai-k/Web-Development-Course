@@ -1,0 +1,5 @@
+It was the age of wisdom, it was the age of foolishness.
+
+git add . = add everything in the current dir
+git status = to check the status
+git log = to get the log of commit history
