@@ -25,13 +25,13 @@
           recipe.ingredients.protein.preparation %>
         </li>
         <li><%= recipe.ingredients.salsa.name %></li>
-        <%= recipe.ingredients.toppings.forEach(topping => { %>
+        <% recipe.ingredients.toppings.forEach(topping => { %>
         <li><%= topping.quantity %> of <%= topping.name %></li>
         <% }); %>
       </ul>
       <% } else {%>
-      <h2>Pick your favourite taco ingredient 👆</h2>
       <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
+      <h2>Pick your favourite taco ingredient 👆</h2>
       <% }%>
     </div>
   </body>
