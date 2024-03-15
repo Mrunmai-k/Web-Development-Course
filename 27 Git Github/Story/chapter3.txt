@@ -1,5 +1,2 @@
 It was the spring of hope, it was the winter of despair.
 
-Before adding to the staging area:
-git diff filename = to check the diff betn previous and current version of the specified file.
-git checkout filename = checkout to previous commit 

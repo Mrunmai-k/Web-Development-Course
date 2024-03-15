@@ -1,3 +1,2 @@
 It was the best of times, it was the worst of times.
 
-git init = initialize the current directory as git dir

@@ -1,0 +1,12 @@
+git init = initialize the current directory as git dir
+--------------------------------------------------------------------------------------------------------
+git add . = add everything in the current dir
+git status = to check the status
+git log = to get the log of commit history
+--------------------------------------------------------------------------------------------------------
+Before adding to the staging area:
+git diff <filename> = to check the diff betn previous and current version of the specified file.
+git checkout <filename> = checkout to previous commit 
+--------------------------------------------------------------------------------------------------------
+git remote add origin <URL> = adds the url of remote repo     
+git push -u <remote name> <branch name> = push the local repo to remote repo
