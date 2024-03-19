@@ -10,3 +10,8 @@ git checkout <filename> = checkout to previous commit
 --------------------------------------------------------------------------------------------------------
 git remote add origin <URL> = adds the url of remote repo     
 git push -u <remote name> <branch name> = push the local repo to remote repo
+--------------------------------------------------------------------------------------------------------
+git branch <branch_name> = create a new branch 
+git branch = returns the list of branches
+git checkout <branchname> = changes to specified branch
+git merge <other_branch> = merges the other branch in main/master
