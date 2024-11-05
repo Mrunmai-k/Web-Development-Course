@@ -8,6 +8,10 @@ const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //1. GET a random joke
+app.get("/random", (req, res) => {
+  const randomIndex = Math.floor(Math.random() * jokes.length); //This will get the random index.
+  res.json(jokes[randomIndex]); // This will send the JS object of random index of jokes as a response in the json object.
+});
 
 //2. GET a specific joke
 
