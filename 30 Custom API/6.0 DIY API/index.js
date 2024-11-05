@@ -21,6 +21,11 @@ app.get("/jokes/:id", (req, res) => {
 });
 
 //3. GET a jokes by filtering on the joke type
+app.get("/filter", (req, res) => {
+  const getType = req.query.type; // this will get the type passed in the query 
+  const typeJokes = jokes.filter((joke) => joke.jokeType === getType); //find will send only first statisfied joke so use filter to send the all jokes which satisfies the condition.
+  res.json(typeJokes);
+});
 
 //4. POST a new joke
 
