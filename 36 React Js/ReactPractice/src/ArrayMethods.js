@@ -63,6 +63,29 @@ const newNumbers6 =  numbers.findIndex(function (num){
 
 console.log(newNumbers6);
 
+// -------------------------------------------------------------------------------------------
+
+// Arrow Function
+
+// anonymous 
+// const arrowNumbers = numbers.map(function (x){
+//     return x * x;
+// })
+
+// no need of paranthesis () if there is only one parameter
+const arrowNumbers = numbers.map(x=>{
+    return x * x;
+})
+
+const arrowNumbers2 = numbers.map((x,y)=>{
+    return x * y;
+})
+
+// no need of curly braces if returning single expression 
+const arrowNumbers3 = numbers.map((x,y) => x * y)
+
+console.log(arrowNumbers);
+
 
 
 // import emojipedia from "./emojipedia"
